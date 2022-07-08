@@ -1,3 +1,5 @@
+/* selector 우선순위  style(body에 직접입력) >> id(#) >> class(.) >> 태그 */
+
 .profile {
     width: 100px;
     display: block;
@@ -16,14 +18,14 @@
 }
 
 #text_describe {
-    text-align:center;
+    text-align: center;
 }
 
 .box1 {
     background-color: cadetblue;
-    width : 200px;
-    margin : 10px;
-    padding : 40px;
+    width: 200px;
+    margin: 10px;
+    padding: 40px;
     border: 4px solid red;
     border-radius: 10px;
     margin-left: auto;
@@ -31,5 +33,36 @@
     box-shadow: 5px 5px gray;
 }
 
+.container {
+    width: 800px;
+}
 
-/* selector 우선순위  style(body에 직접입력) >> id(#) >> class(.) >> 태그
+.header {
+    width: 100%;
+    height: 100px;
+    background: aquamarine;
+
+}
+
+.left_menu {
+    width: 20%;
+    height: 400px;
+    background: cornflowerblue;
+    float: left;
+}
+
+.right_menu {
+    width: 80%;
+    height:400px;
+    background: coral;
+    float: left;
+}
+
+.footer {
+    width : 100%;
+    height : 100px;
+    background-color : grey;
+    clear:both;
+}
+
+/* selector 우선순위  style(body에 직접입력) >> id(#) >> class(.) >> 태그 */
