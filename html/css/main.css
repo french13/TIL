@@ -1,5 +1,14 @@
 /* selector 우선순위  style(body에 직접입력) >> id(#) >> class(.) >> 태그 */
 
+.navbar li {
+    display: inline-block;
+}
+
+.navbar a {
+    font-size: 16px;
+    text-decoration: none;
+}
+
 .profile {
     width: 100px;
     display: block;
@@ -54,16 +63,67 @@
 
 .right_menu {
     width: 80%;
-    height:400px;
+    height: 400px;
     background: coral;
     display: inline-block;
     /* float: left; */
 }
 
+.main_background {
+    background-image: url(../img/shoes.jpg);
+    width: 100%;
+    height : 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding:1px;
+    position: relative;
+}
+
+.main_text{
+    margin-left: 20px;
+}
+
+.main_title {
+    color:white;
+    font-size:40px;
+    margin-top: 200px;
+}
+
+.main_title2 {
+    color:white;
+    font-size:20px;
+}
+
+.main_button {
+ padding: 15px;
+ font-size: 20px;
+ background: white;
+ border:none;
+ border-radius: 15px;
+ position: relative; /*내 원래 위치에서 이동하시오, 공중에 뜸*/
+ left:10px;
+}
+
+.main_ex {
+   width : 80%;
+   max-width: 600px;
+   background: gray;
+   border : 10px red;
+   border: 4px none;
+   border-radius: 15px;
+   padding: 10px;
+   position: relative;
+   bottom: 20px;
+   text-align: center;
+   margin: auto;
+   box-sizing: border-box;
+}
+
 .footer {
-    width : 100%;
-    height : 100px;
-    background-color : grey;
+    width: 100%;
+    height: 100px;
+    background-color: grey;
     /* clear:both; */
 }
 
