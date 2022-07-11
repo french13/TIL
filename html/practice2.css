@@ -1,0 +1,10 @@
+td {
+    border: 1px solid aqua;
+}
+
+table {
+    border-collapse: collapse;
+    vertical-align: middle;
+    border-color : 1px solid aqua;
+    border-radius: 15px;
+}
