@@ -10,14 +10,30 @@
 </head>
 
 <body>
-    <div class="alert_box" id="alert">알림창
-        <button onclick="document.getElementById('alert').style.display='none'">닫기</button>
+    <div class="alert-box" id="alert">
+        <p id='title'>알림창임</p>
+        <button id="close">닫기</button>
     </div>
-    <button onclick="document.getElementById('alert').style.display='block'">버튼</button>
 
-    <script>
-        
-    </script>
+    <button onclick="아이디창열기()">버튼1</button>
+    <button onclick="비번창열기()">버튼2</button>
+
+<script>
+
+document.getElementById('close').addEventListener('click', function(){
+    document.getElementById('alert').style.display='none';
+});
+
+    function 아이디창열기() {
+        document.getElementById('title').innerHTML = '아이디 입력하셈';
+        document.getElementById('alert').style.display='block';
+    }
+    function 비번창열기() {
+        document.getElementById('title').innerHTML= '비번을 입력하셈';
+        document.getElementById('alert').style.display='block';
+    }
+    
+</script>
 </body>
 
 </html>
