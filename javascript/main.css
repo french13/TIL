@@ -5,3 +5,11 @@
     border-radius: 5px;
     display:none;
 }
+
+.list-group2 {
+    display:none;
+}
+
+.show {
+    display:block;
+}
