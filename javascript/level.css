@@ -34,3 +34,25 @@
 .show-modal {
     display : block;
 }
+
+#hide {
+    display:block;
+}
+
+.alert-danger {
+    display : block;
+}
+
+.slide-container {
+    width: 300vw;
+    transition: all 1s;
+}
+
+.slide-box {
+    width:100vw;
+    float : left;
+}
+
+.slide-box img {
+width: 100%
+}

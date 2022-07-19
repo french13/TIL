@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>태조 이성계가 태어난 년도는?</p>
+    <input type="text" id="answer">
+    <button id="send-answer">제출</button>
+
+    <script>
+        let count = 0;
+
+        document.getElementById("send-answer").addEventListener('click', function () {
+            count += 1;
+
+            let 정답 = document.getElementById('answer').value;
+            if (정답 == 1335) {
+                alert('정답')
+            } else if (count >= 3 && 정답 != 1335) {
+                alert('멍청아')
+            }
+        })
+    </script>
+</body>
+
+</html>
