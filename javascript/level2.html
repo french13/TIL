@@ -13,6 +13,24 @@
 
 <body>
 
+    <nav class="navbar2 navbar-light bg-light">
+        <div class="container-fluid">
+            <span class="navbar-brand2">Navbar</span>
+            <span class="badge bg-dark">Dark 🔄</span>
+            <button class="navbar-toggler" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <script>
+
+        window.addEventListener('scroll', function(){
+            
+        })
+
+    </script>
+
     <div class="alert alert-danger">
         <p><span class="num">5</span>초 이내 구매시 사은품 증정!</p>
     </div>
@@ -44,18 +62,19 @@
     <button class="slide-2">2</button>
     <button class="slide-3">3</button>
     <button class="next">다음</button>
+    <button class="before">이전</button>
 
     <script>
-        document.getElementsByClassName('slide-1')[0].addEventListener('click', function () {
-            document.getElementsByClassName("slide-container")[0].style.transform = 'translateX(0vw)'
+        document.querySelector('.slide-1').addEventListener('click', function () {
+            document.querySelector(".slide-container").style.transform = 'translateX(0vw)'
         })
 
-        document.getElementsByClassName('slide-2')[0].addEventListener('click', function () {
-            document.getElementsByClassName("slide-container")[0].style.transform = 'translateX(-100vw)';
+        document.querySelector('.slide-2').addEventListener('click', function () {
+            document.querySelector(".slide-container").style.transform = 'translateX(-100vw)';
         })
 
-        document.getElementsByClassName('slide-3')[0].addEventListener('click', function () {
-            document.getElementsByClassName("slide-container")[0].style.transform = 'translateX(-200vw)';
+        document.querySelector('.slide-3').addEventListener('click', function () {
+            document.querySelector(".slide-container").style.transform = 'translateX(-200vw)';
         })
     </script>
 
@@ -65,17 +84,33 @@
         document.querySelector('.next').addEventListener('click', function () {
 
             if (지금사진 == 1) {
-                document.getElementsByClassName("slide-container")[0].style.transform = 'translateX(-100vw)';
+                document.querySelector(".slide-container").style.transform = 'translateX(-100vw)';
                 지금사진 = 2;
             } else if (지금사진 == 2) {
-                document.getElementsByClassName("slide-container")[0].style.transform = 'translateX(-200vw)';
+                document.querySelector(".slide-container").style.transform = 'translateX(-200vw)';
                 지금사진 = 3;
-            } else if(지금사진 == 3) {
-                document.getElementsByClassName("slide-container")[0].style.transform = 'translateX(0vw)';
+            } else if (지금사진 == 3) {
+                document.querySelector(".slide-container").style.transform = 'translateX(0vw)';
                 지금사진 = 1;
-            }          
+            }
+        })
+
+        document.querySelector('.before').addEventListener('click', function () {
+            if (지금사진 == 1) {
+                document.querySelector(".slide-container").style.transform = 'translateX(-200vw)';
+                지금사진 = 3;
+            } else if (지금사진 == 3) {
+                document.querySelector(".slide-container").style.transform = 'translateX(-100vw)';
+                지금사진 = 2;
+            } else if (지금사진 == 2) {
+                document.querySelector(".slide-container").style.transform = 'translateX(0vw)';
+                지금사진 = 1;
+            }
         })
     </script>
+
+    <div style="height : 1000px;">
+    </div>
 
 
 
