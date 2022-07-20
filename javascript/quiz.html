@@ -9,6 +9,28 @@
 </head>
 
 <body>
+<script>
+    var 출석부 = ['흥민', '영희', '철수', '재석'];
+
+        function 이름찾기(name){
+        for( let i = 0; i< 출석부.length; i++){
+            if(name == 출석부[i]){
+                console.log([i]+" 있어요");
+            }else{
+                console.log('없어요');
+        }
+        }
+}
+이름찾기('흥민');
+</script>
+
+
+
+
+
+
+
+
     <p>태조 이성계가 태어난 년도는?</p>
     <input type="text" id="answer">
     <button id="send-answer">제출</button>
