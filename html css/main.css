@@ -1,0 +1,104 @@
+.container {
+    width : 1000px;
+    height : 1vh;
+}
+
+.overlay-test {
+    background-color: aqua;
+    width  : 300px;
+    height : 300px;
+}
+
+.overlay-wrap {
+    position:absolute;
+    width : 100%;
+    height : 100%;
+    overflow: hidden;
+}
+
+.overlay {
+    position:absolute;
+    background-color: black;
+    opacity: 0;
+    width : 100%;
+    height : 100%;
+    color : black;
+    font-size: 4vw;
+    color : white;
+    transition: all 1s;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-wrap:hover .overlay {
+    opacity: 0.5;
+}
+
+.container i {
+    background-color: burlywood;
+    width : 100px;
+    height : 100px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    padding-top : 25px;
+    padding-left: 25px;
+    color:white;
+}
+
+.transtext {
+    border : solid 2px red;
+    transform: rotate(0deg)
+}
+
+.transtext:hover {
+    animation-name: 왔다갔다;
+    animation-duration: 0.1s;
+    animation-iteration-count: 100;
+}
+
+
+@keyframes 왔다갔다 {
+    0% {
+    transform: rotate(0deg)
+    }
+    33% {
+        transform: rotate(1deg)
+    }
+    66%{
+        transform: rotate(-1deg)
+    }
+    100%{
+        transform: rotate(0deg)
+    }
+    
+}
+
+.grid-contain {
+    width : 1000px;
+    height :500px;
+    display : grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+    grid-template-rows:     1fr 0.5fr 2fr;
+    grid-template-areas: 
+    "ban ban ban ban ban"
+    "nav . . . ."
+    "con con con con con";
+}
+
+.grid-contain div {
+    border : solid 1px black;
+}
+
+.grid-banner {
+    grid-area: ban;
+    background-color: blueviolet;
+}
+
+.grid-nav {
+    grid-area: nav;
+}
+
+.grid-content {
+    grid-area: con;
+}

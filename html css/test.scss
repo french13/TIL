@@ -1,0 +1,30 @@
+@use 'use';
+
+@mixin boxSize ($size) {
+    width : 200px;
+    height : $size;
+    padding : 20px;
+}
+
+.box1 {
+    @include boxSize(50px);
+    background-color: green;
+}
+
+.box2 {
+    @include boxSize(50px);
+    background-color: red;
+}
+
+.box3 {
+    @include boxSize(50);
+    background-color: blue;
+}
+
+$boxsize : 200px;
+
+.box4 {
+    width : $boxsize;
+    height : 100px;
+    background-color: yellow;
+}
