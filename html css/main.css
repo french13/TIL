@@ -70,9 +70,10 @@
     }
     100%{
         transform: rotate(0deg)
-    }
-    
+    } 
 }
+
+
 
 .grid-contain {
     width : 1000px;
