@@ -1,15 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 
-function Footer({isDark, setIsDark}){
+function Footer(){
+
+    const {isDark, setIsDark} = useContext(ThemeContext);
+
+    function toggleTheme(){
+        setIsDark(!isDark);
+    }
+
     return(
-        <header className="content"
+        <footer className="footer"
         style={{
             backgroundColor : isDark ? 'black' : 'lightgray',
-            color : isDark ? 'white' : 'black',
         }}>
-            <h1>Welcome! 좋은 하루 되세요.</h1>
-        </header>
+
+            <button className="button" onClick={toggleTheme}>
+                Dark Mode
+            </button>
+        </footer>
     )
 }
 
-export default Content
+export default Footer

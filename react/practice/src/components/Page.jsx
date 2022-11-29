@@ -1,15 +1,18 @@
-import React from "react"
+import React, { useContext } from "react"
+import { ThemeContext } from "../context/ThemeContext";
 import Content from './Content';
 import Footer from './Footer';
 import Header from './Header'
 
 
-function Page({isDark, setIsDark}){
+function Page(){
+    const data = useContext(ThemeContext);
+    console.log(data)
     return(
         <div className="page">
-            <Header isDark={isDark}></Header>
-            <Content isDark={isDark}></Content>
-            <Footer setIsDark={setIsDark}></Footer>
+            <Header></Header>
+            <Content></Content>
+            <Footer></Footer>
 
         </div>
     )

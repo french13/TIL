@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 
-function Header({isDark}){
+function Header(){
+    const {isDark} = useContext(ThemeContext);
+
     return(
         <header className="header"
         style={{
@@ -12,4 +15,4 @@ function Header({isDark}){
     )
 }
 
-export default Header;
+export default Header
