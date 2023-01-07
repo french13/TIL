@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(a, b, c){
+                let answer
+
+                if(a-b>0){
+                    answer = b
+                }else{
+                    answer = a
+                }
+
+                if(answer-c>0){
+                    answer = c
+                }else{
+                    answer = answer
+                }
+
+                return answer;
+            }
+
+            console.log(solution(10, 50, 11));
+        </script>
+    </body>
+</html>
