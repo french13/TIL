@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s, t){
+                let answer=0;
+                
+                let arr = s.split("")
+
+                arr.map((item,i)=>{
+                    if(item === t){
+                        answer++
+                    }
+                })
+
+
+                console.log(arr)
+                return answer;
+            }
+            
+            let str="COMPUTERPROGRAMMING";
+            console.log(solution(str, 'R'));
+        </script>
+    </body>
+</html>
+

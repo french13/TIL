@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){
+                let answer=[];
+                let arr = s.split("");
+                
+                arr.map((item,i)=>{
+                    if(item === "A"){
+                        answer.push("#")
+                    }else{
+                        answer.push(item)
+                    }
+                })
+                
+                return answer.join("");
+            }
+            
+
+            let str="BANANA";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
+
+
