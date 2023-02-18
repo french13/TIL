@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){
+                let answer="YES";
+                let arr = s.toUpperCase().split("").reverse()
+                let arr2 = s.toUpperCase().split("")
+                
+                if(arr.join("") === arr2.join("")){
+                    answer = "YES"
+                }else {
+                    answer ="NO"
+                }
+                return answer;
+            }
+            
+            let str="gooot";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>

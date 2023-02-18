@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){  
+                let answer="";
+
+                let num = function(s){
+                    return s.split("").length
+                }
+
+                let arr = s.sort((a,b)=>{
+                  return  num(a)-num(b)
+                })
+                
+               
+                return arr[arr.length-1]
+            }
+            let str=["teacher", "time", "student", "beautiful", "good"];
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
