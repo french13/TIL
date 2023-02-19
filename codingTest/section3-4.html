@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s, t){
+                let answer=[];
+                
+                let count = 0;
+                let count2 = 0;
+                let arr = []
+                let arr2 = []
+                for(let i of s){
+                    if(i === t){
+                        arr.push(0)
+                        count = 0;
+                    }else{
+                        count++;
+                        arr.push(count)
+                    }
+                }
+              let newArray =  s.split('').reverse()
+              newArray.map((item,i)=>{
+                if(item === t){
+                        arr2.push(0)
+                        count2 = 0;
+                    }else{
+                        count2++;
+                        arr2.push(count2)
+                    }
+              })
+                console.log(arr)
+                console.log(arr2.reverse())
+
+                return answer;
+            }
+            
+            let str="teachermode";
+            console.log(solution(str, 'e'));
+        </script>
+    </body>
+</html>

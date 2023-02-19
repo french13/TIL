@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(n, arr){
+                let answer, min = 0;
+
+                for(let i of arr){
+                    let sum = String(i).split("").reduce((a,b)=> Number(a)+Number(b), 0)
+                    if(sum > min){
+                        min = sum;
+                        answer = i;
+                    }else if(sum === min){
+                        if(i>answer){
+                            answer = i ;
+                        }
+                    }
+                }
+                
+                return answer;
+            }
+            
+            let arr=[128, 460, 603, 40, 521, 137, 123];
+            console.log(solution(7, arr));
+        </script>
+    </body>
